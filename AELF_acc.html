@@ -14,12 +14,15 @@
     #menu a:hover { text-decoration: underline; }
     #menu b { font-size: 18px; text-decoration: underline; }
     #content { flex: 1; overflow-y: auto; padding: 10px 15px; }
+    #content a { color: #cc0000; }
+    #menu, #menu * { color: #000000; }
+    #menu a { color: #660033; }
     @media (prefers-color-scheme: dark) {
       body, #content { background: #1a1a1a !important; color: #ffffff !important; }
       #menu { background: #1a1a1a !important; color: #ffffff !important; }
-      #menu a { color: #ffffff !important; }
+      #menu a, #menu * { color: #ffffff !important; }
       td, th { background: #1a1a1a !important; color: #ffffff !important; border-color: #555 !important; }
-      a { color: #aaaaff !important; }
+      #content a { color: #aaaaff !important; }
     }
 </style>
 <meta name="apple-mobile-web-app-capable" content="yes">
