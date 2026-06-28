@@ -20,13 +20,27 @@
   }
     font[color="#000000"] { color: #ffffff !important; }
   }
-
-  @media (prefers-color-scheme: dark) {
-    body { background: #1a1a1a !important; color: #ffffff !important; }
-    #menu { background: #1a1a1a !important; color: #ffffff !important; }
-    #menu a { color: #ffffff !important; }
     #content { background: #1a1a1a !important; color: #ffffff !important; }
     td, th { background: #1a1a1a !important; color: #ffffff !important; }
+  }
+
+  @media (prefers-color-scheme: light) {
+    body { background: #ffffff !important; color: #000000 !important; }
+    #menu { background: #ffffcc !important; }
+    #menu a { color: #660033 !important; }
+    #menu b { color: #000000 !important; }
+    td, th { background: #ffffff !important; color: #000000 !important; }
+    td[bgcolor="#ffffcc"] { background: #ffffcc !important; }
+    a { color: #660033 !important; }
+  }
+  @media (prefers-color-scheme: dark) {
+    body { background: #1a1a1a !important; color: #ffffff !important; }
+    #menu { background: #1a1a1a !important; }
+    #menu a { color: #ffffff !important; }
+    #menu b { color: #ffffff !important; }
+    #content { background: #1a1a1a !important; color: #ffffff !important; }
+    td, th { background: #1a1a1a !important; color: #ffffff !important; }
+    a { color: #ffffff !important; }
   }
 </style>
 <meta name="apple-mobile-web-app-capable" content="yes">
