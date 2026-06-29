@@ -24357,5 +24357,22 @@
   </tr>
 </table></div>
 </div>
+
+<div id="pdf-overlay" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:9999;">
+  <a href="#" onclick="document.getElementById('pdf-overlay').style.display='none';document.getElementById('pdf-frame').src='';return false;" style="position:fixed;top:10px;left:10px;z-index:10000;">
+    <img src="apple-touch-icon.png" width="120" height="120" style="border-radius:20px;border:none;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.5);" alt="Accueil">
+  </a>
+  <iframe id="pdf-frame" src="" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"></iframe>
+</div>
+<script>
+document.addEventListener('click', function(e) {
+  var a = e.target.closest('a');
+  if (a && a.href && a.href.toLowerCase().indexOf('.pdf') !== -1) {
+    e.preventDefault();
+    document.getElementById('pdf-frame').src = a.href;
+    document.getElementById('pdf-overlay').style.display = 'block';
+  }
+});
+</script>
 </body>
 </html>
