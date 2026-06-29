@@ -24375,13 +24375,19 @@ document.addEventListener('click', function(e) {
 });
 
 window.addEventListener('orientationchange', function() {
-  var frame = document.getElementById('pdf-frame');
-  var src = frame.src;
-  if (src) {
+  var overlay = document.getElementById('pdf-overlay');
+  if (overlay.style.display !== 'none') {
     setTimeout(function() {
-      frame.src = '';
-      frame.src = src;
+      overlay.style.width = window.innerWidth + 'px';
+      overlay.style.height = window.innerHeight + 'px';
     }, 300);
+  }
+});
+window.addEventListener('resize', function() {
+  var overlay = document.getElementById('pdf-overlay');
+  if (overlay.style.display !== 'none') {
+    overlay.style.width = window.innerWidth + 'px';
+    overlay.style.height = window.innerHeight + 'px';
   }
 });
 </script>
